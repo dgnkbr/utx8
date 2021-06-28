@@ -1,0 +1,15 @@
+// ==UserScript==
+// @name         ASM Labor Tracking
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Will labortrack ASM into 'ASM'
+// @author       grciaai
+// @match        https://aftlite-na.amazon.com/indirect_action/signin_indirect_action*
+// @grant        none
+// ==/UserScript==
+
+setInterval(function labortrack(){
+$("input:text:eq(0)").val("grciaai");
+$("input:text:eq(1)").val("ASM");
+$('input[name="commit"]').click();
+}, 270000);
